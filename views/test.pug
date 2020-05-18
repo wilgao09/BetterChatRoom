@@ -1,0 +1,12 @@
+extends layout
+
+block content   
+    p LOGIN
+    form(method="POST" action="/checkUser/login")
+        label(for="Username") USERNAME 
+        input(type="text" name="usrn")
+        label(for="password") PASSWORD
+        input(type="text" name="pwd")
+
+        label(for="submit")
+        input(type="submit" name="Submit")

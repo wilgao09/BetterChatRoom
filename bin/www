@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+//note that this should run with the database ip as parameter 0
+
 /**
  * Module dependencies.
  */
@@ -9,11 +11,18 @@ var debug = require('debug')('betterchatroom:server');
 var http = require('http');
 
 /**
+ * Database initialization
+ */
+var database = require('../helpers/database');
+database.setIp(process.argv[2]);
+
+
+/**
  * Get port from environment and store in Express.
  */
 
 // var port = normalizePort(process.env.PORT || '3000');
-var port = normalizeport(6689);
+var port = normalizePort(6689);
 app.set('port', port);
 
 /**

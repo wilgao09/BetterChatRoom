@@ -6,7 +6,9 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var checkUserRouter = require('./routes/checkUser');
+// var usersRouter = require('./routes/users');
+// var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -27,7 +29,9 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+app.use('/checkUser', checkUserRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

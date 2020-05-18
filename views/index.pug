@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h1= title
+    p Welcome to #{title}
+
+    p LOGIN
+    form(method="POST" action="/checkUser/login")
+        label(for="Username") USERNAME 
+            input(type="text" name="usrn")
+        label(for="Password") PASSWORD
+            input(type="text" name="pwd")
+
+        label(for="submit")
+            input(type="submit" name="Submit")
+    hr
+    P REGISTER
+    form(method="POST" action="/checkUser/register/createUser")
+        label(for="Username") USERNAME
+            input(type="text" name="usrn") 
+        label(for="Password") PASSWORD
+            input(type="text" name="pwd")
+        label(for="First Name") FIRST NAME
+            input(type="text" name="fName")
+        label(for="Last Name") LAST NAME
+            input(type="text" name="lName")
+        label(for="Age") AGE
+            input(type="text" name="age")
+        
+        label(for="submit")
+            input(type="submit" name="Submit")
