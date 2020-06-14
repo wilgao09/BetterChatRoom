@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aes256": "^1.0.4",
     "cookie-parser": "~1.4.4",
     "core-js": "^3.6.5",
     "debug": "~2.6.9",

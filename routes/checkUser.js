@@ -21,7 +21,7 @@ router.post('/login', function(req,res, next){
     }, function(err,user) {
         if (err) res.status(404).send({valid:"err"});
         if (user == null) res.send({valid:"incorrrect"});
-        res.next();
+        next();
     });
 });
 
