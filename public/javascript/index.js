@@ -39,6 +39,7 @@ function toDashboard() {
     nReq.open("GET",url,true);
     nReq.onload = function() {
         console.log(this.response);
+        document = this.response;
     }
     nReq.send();
 }
