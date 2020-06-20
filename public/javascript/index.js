@@ -18,7 +18,10 @@ function login() {
                 alert("VALID!");
                 toDashboard();
                 break;
+            
         }
+        console.log("here is res");
+        console.log(res);
     });
 }
 

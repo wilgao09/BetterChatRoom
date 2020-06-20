@@ -8,12 +8,14 @@
   */
 function submitForm(strId, action, callback, method="POST") {
     var url = "http://" + window.location.hostname + ":6689" + action;
-    var labels = document.getElementById(strId).getElementsByTagName("label");
-    var inputs = [];
-    for (var n = 0 ; n != labels.length; n++) {
-        var inps = labels[n].getElementsByTagName("input");
-        if (inps.length > 0) inputs.push(inps[0]);
-    }
+    var form = document.getElementById(strId);
+    var inputs = form.getElementsByTagName("input");
+    console.log(form);
+    console.log(inputs);
+    // for (var n = 0 ; n != labels.length; n++) {
+    //     var inps = labels[n].getElementsByTagName("input");
+    //     if (inps.length > 0) inputs.push(inps[0]);
+    // }
     if (inputs.length > 0) url += "?";
     console.log(inputs);
     for (var ind = 0; ind != inputs.length; ind++) {
