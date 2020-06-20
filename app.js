@@ -7,6 +7,9 @@ var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 var checkUserRouter = require('./routes/checkUser');
+var dashboardRouter = require('./routes/dashboard');
+
+var JWTmid = require('./middleware/JWTAuth');
 // var usersRouter = require('./routes/users');
 // var testRouter = require('./routes/test');
 
@@ -27,11 +30,10 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(JWTmid);
 app.use('/', indexRouter);
-
-
 app.use('/checkUser', checkUserRouter);
+app.use('/dashboard',dashboardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

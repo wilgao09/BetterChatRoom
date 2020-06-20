@@ -13,7 +13,7 @@ var http = require('http');
 /**
  * Database initialization
  */
-var database = require('../helpers/database');
+var database = require('../conf/database');
 database.setIp(process.argv[2]);
 
 

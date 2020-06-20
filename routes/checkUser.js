@@ -8,13 +8,28 @@
 
 var express = require('express');
 var router = express.Router();
+var tokens = require('../helpers/tokens');
 
-var database = require("../helpers/database");
+var database = require("../conf/database.js");
 const Users = database.collectionList.user_logins;
 
-router.post('/login', function(req,res, next){
-    console.log("Someone tried logging in with:");
+router.use(function(req, res, next){
+    console.log("entering with ");
+    console.log(req.query);
     console.log(req.body);
+    if (req.body == {} && req.query != {}) {
+        req.body = req.query;
+
+    }
+    next();
+})
+
+router.post('/login', function(req,res, next){
+    // console.log("Someone tried logging in with:");
+    // console.log(req.body);
+    // console.log(req.query);
+    // toUse = req.body; //if using forms
+    // if (toUse == {}) toUse = req.params
     Users.findOne({
         usrn:req.body.usrn,
         pwd:req.body.pwd
@@ -27,7 +42,15 @@ router.post('/login', function(req,res, next){
 
 router.post('/login', function(req,res,next) {
     //do something to take them to the next page
-    res.render('index',{title:"you're logged in"});
+    var nToken = tokens.createToken({
+        usrn:req.body.usrn,
+        exp:Date.now()+86400000, //a day
+        iss:"BetterChatroom"
+    })
+    //res.setHeader("Set-Cookie","JWT="+nToken+";Secure;HttpOnly");
+    res.cookie("JWT",nToken, {httpOnly:true, secure: true});
+    res.send({valid:"true"});
+    // res.render('index',{title:"you're logged in"});
 })
 
 

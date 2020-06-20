@@ -2,30 +2,37 @@ extends layout
 
 block content
     h1= title
-    p Welcome to #{title}
+    p Welcome to BETTERCHATROOM
+    div(class= "col")
+        div(class="form" id="login")
+            p(class="subhead") LOGIN
+            label(for="Username") USERNAME 
+                input(type="text" name="usrn" )
+            label(for="Password") PASSWORD 
+                input(type="text" name="pwd" )
+            label(for="submit")
+                button(onclick="login()") Submit
 
-    p LOGIN
-    form(method="POST" action="/checkUser/login")
-        label(for="Username") USERNAME 
-            input(type="text" name="usrn")
-        label(for="Password") PASSWORD
-            input(type="text" name="pwd")
+    div(class= "col")
+        div(class="form" id="register")
+            p(class="subhead") REGISTER 
+            label(for="Username") USERNAME 
+                input(type="text" name="usrn" )
+            label(for="Password") PASSWORD 
+                input(type="text" name="pwd" id="pw1")
+            label(for="PasswordConfirm") CONFIRM PASSWORD 
+                input(type="text" name="pwd2" id="pw2")
+            label(for="First Name") FIRST NAME 
+                input(type="text" name="fName" )
+            label(for="Last Name") LAST NAME 
+                input(type="text" name="lName")
+            label(for="Age") AGE 
+                input(type="text" name="age")
+            label(for="submit")
+                button(onclick="register()") Submit
 
-        label(for="submit")
-            input(type="submit" name="Submit")
-    hr
-    P REGISTER
-    form(method="POST" action="/checkUser/register/createUser")
-        label(for="Username") USERNAME
-            input(type="text" name="usrn") 
-        label(for="Password") PASSWORD
-            input(type="text" name="pwd")
-        label(for="First Name") FIRST NAME
-            input(type="text" name="fName")
-        label(for="Last Name") LAST NAME
-            input(type="text" name="lName")
-        label(for="Age") AGE
-            input(type="text" name="age")
-        
-        label(for="submit")
-            input(type="submit" name="Submit")
+
+    link(href="stylesheets/forms.css" rel="stylesheet")
+    script(src="javascript/forms.js")
+    script(src="javascript/index.js")
+    
