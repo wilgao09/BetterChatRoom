@@ -2,32 +2,24 @@ extends layout
 
 block content
     h1= title
-    p Welcome to BETTERCHATROOM
+    h2(class="topText") Welcome to BETTERCHATROOM
     div(class= "col")
         div(class="form" id="login")
             p(class="subhead") LOGIN
-            label(for="Username") USERNAME 
-                input(type="text" name="usrn" )
-            label(for="Password") PASSWORD 
-                input(type="text" name="pwd" )
+            input(type="text" name="usrn" placeholder="Username")
+            input(type="text" name="pwd" placeholder="Password")
             label(for="submit")
                 button(onclick="login()") Submit
 
     div(class= "col")
         div(class="form" id="register")
             p(class="subhead") REGISTER 
-            label(for="Username") USERNAME 
-                input(type="text" name="usrn" )
-            label(for="Password") PASSWORD 
-                input(type="text" name="pwd" id="pw1")
-            label(for="PasswordConfirm") CONFIRM PASSWORD 
-                input(type="text" name="pwd2" id="pw2")
-            label(for="First Name") FIRST NAME 
-                input(type="text" name="fName" )
-            label(for="Last Name") LAST NAME 
-                input(type="text" name="lName")
-            label(for="Age") AGE 
-                input(type="text" name="age")
+            input(type="text" name="fName" placeholder="First Name")
+            input(type="text" name="lName" placeholder="Last Name") 
+            input(type="text" name="age" placeholder="Age")
+            input(type="text" name="usrn" placeholder="Username")
+            input(type="password" name="pwd" id="pw1" placeholder="Password")
+            input(type="password" name="pwd2" id="pw2" placeholder="Confirm Password")
             label(for="submit")
                 button(onclick="register()") Submit
 

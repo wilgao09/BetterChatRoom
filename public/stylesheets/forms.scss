@@ -6,7 +6,7 @@ div.col {
 
 div.form {
     width: 50%;
-    padding: 15%;
+    padding: 0 15%;
 }
 
 div.form > label {
@@ -15,7 +15,18 @@ div.form > label {
 }
 
 div.form input {
-    float:right;
+    width: 100%;
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid gainsboro;
+    padding: 3%;
+    margin: 0 auto 5% auto;
+    color: white;
+    font: 16px "Consolas", Helvetica, Arial, sans-serif;
+}
+
+div.form input:focus {
+    border-bottom: 2px solid pink;
 }
 
 div.form button {
@@ -31,5 +42,7 @@ div.form button {
 }
 
 div.form button:hover {
-    background-color:green;
+    background-color: pink;
+    color: black;
+    cursor: pointer;
 }
