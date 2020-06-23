@@ -18,7 +18,10 @@ function login() {
                 alert("VALID!");
                 toDashboard();
                 break;
+            
         }
+        console.log("here is res");
+        console.log(res);
     });
 }
 
@@ -39,6 +42,7 @@ function toDashboard() {
     nReq.open("GET",url,true);
     nReq.onload = function() {
         console.log(this.response);
+        document = this.response;
     }
     nReq.send();
 }

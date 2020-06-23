@@ -1365,3 +1365,335 @@
 2020-06-19T21:27:49.150-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
 2020-06-19T21:27:49.150-0400 I  CONTROL  [consoleTerminate] now exiting
 2020-06-19T21:27:49.150-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-20T16:30:23.501-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T16:30:23.503-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T16:30:23.910-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=11024 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T16:30:23.911-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T16:30:23.921-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T16:30:23.921-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T16:30:24.047-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:47304][11024:140718413405776], txn-recover: Recovering log 53 through 54
+2020-06-20T16:30:24.109-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:109127][11024:140718413405776], txn-recover: Recovering log 54 through 54
+2020-06-20T16:30:24.175-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:175125][11024:140718413405776], txn-recover: Main recovery loop: starting at 53/6400 to 54/256
+2020-06-20T16:30:24.312-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:311934][11024:140718413405776], txn-recover: Recovering log 53 through 54
+2020-06-20T16:30:24.384-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:384136][11024:140718413405776], txn-recover: Recovering log 54 through 54
+2020-06-20T16:30:24.469-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685024:469696][11024:140718413405776], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-20T16:30:24.518-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-20T16:30:24.569-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-20T16:30:24.605-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-20T16:30:24.650-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-20T16:30:24.660-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-20T16:30:24.667-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-20T16:30:24.703-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-20T16:30:24.905-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-20T16:30:24.909-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-20T16:30:24.909-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-20T16:30:24.909-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-20T16:30:24.909-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-20T16:30:25.020-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-20T16:30:31.338-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:57632 #1 (1 connection now open)
+2020-06-20T16:30:31.360-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:57632 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T16:30:31.360-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-20T16:30:31.486-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:57632
+2020-06-20T16:31:00.876-0400 I  SHARDING [conn1] Marking collection ChatRoom.users as collection version: <unsharded>
+2020-06-20T16:33:37.656-0400 I  NETWORK  [conn1] end connection 10.222.1.60:57632 (0 connections now open)
+2020-06-20T16:33:44.858-0400 I  CONTROL  [thread2] Ctrl-C signal
+2020-06-20T16:33:44.859-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-20T16:33:44.870-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-20T16:33:44.870-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-20T16:33:44.873-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-20T16:33:44.874-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-20T16:33:44.909-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-20T16:33:44.910-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-20T16:33:44.910-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-20T16:33:44.911-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-20T16:33:44.911-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-20T16:33:44.912-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-20T16:33:45.007-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-20T16:33:45.008-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-20T16:33:45.008-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-20T16:33:45.327-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-20T16:33:45.327-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-20T16:33:45.327-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-20T16:33:47.518-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T16:33:47.519-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T16:33:47.899-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T16:33:47.900-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=9272 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T16:33:47.901-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T16:33:47.904-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T16:33:47.904-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T16:33:47.965-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685227:964682][9272:140718413405776], txn-recover: Recovering log 54 through 55
+2020-06-20T16:33:48.043-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685228:43472][9272:140718413405776], txn-recover: Recovering log 55 through 55
+2020-06-20T16:33:48.129-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685228:128797][9272:140718413405776], txn-recover: Main recovery loop: starting at 54/9088 to 55/256
+2020-06-20T16:33:48.239-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685228:238902][9272:140718413405776], txn-recover: Recovering log 54 through 55
+2020-06-20T16:33:48.307-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685228:307078][9272:140718413405776], txn-recover: Recovering log 55 through 55
+2020-06-20T16:33:48.360-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685228:359818][9272:140718413405776], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-20T16:33:48.400-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-20T16:33:48.418-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-20T16:33:48.438-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-20T16:33:48.445-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-20T16:33:48.445-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-20T16:33:48.446-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-20T16:33:48.453-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-20T16:33:48.701-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-20T16:33:48.704-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-20T16:33:48.704-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-20T16:33:48.705-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-20T16:33:48.705-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-20T16:33:49.018-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-20T16:33:55.377-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:57768 #1 (1 connection now open)
+2020-06-20T16:33:55.395-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:57768 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T16:33:55.395-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-20T16:33:55.461-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:57768
+2020-06-20T16:34:09.774-0400 I  SHARDING [conn1] Marking collection ChatRoom.users as collection version: <unsharded>
+2020-06-20T16:35:55.710-0400 I  CONTROL  [thread2] Ctrl-C signal
+2020-06-20T16:35:55.710-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-20T16:35:55.712-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-20T16:35:55.713-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-20T16:35:55.714-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-20T16:35:55.715-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-20T16:35:55.746-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-20T16:35:55.747-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-20T16:35:55.748-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-20T16:35:55.748-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-20T16:35:55.748-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-20T16:35:55.749-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-20T16:35:55.813-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-20T16:35:55.813-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-20T16:35:55.814-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-20T16:35:56.142-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-20T16:35:56.143-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-20T16:35:56.143-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-20T16:37:17.866-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T16:37:17.867-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T16:37:18.199-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T16:37:18.200-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=16212 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T16:37:18.200-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T16:37:18.200-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T16:37:18.201-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T16:37:18.203-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T16:37:18.203-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T16:37:18.267-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:267412][16212:140718413405776], txn-recover: Recovering log 55 through 56
+2020-06-20T16:37:18.341-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:341207][16212:140718413405776], txn-recover: Recovering log 56 through 56
+2020-06-20T16:37:18.398-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:398393][16212:140718413405776], txn-recover: Main recovery loop: starting at 55/6528 to 56/256
+2020-06-20T16:37:18.485-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:485824][16212:140718413405776], txn-recover: Recovering log 55 through 56
+2020-06-20T16:37:18.560-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:560384][16212:140718413405776], txn-recover: Recovering log 56 through 56
+2020-06-20T16:37:18.628-0400 I  STORAGE  [initandlisten] WiredTiger message [1592685438:628119][16212:140718413405776], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-20T16:37:18.660-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-20T16:37:18.667-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-20T16:37:18.676-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-20T16:37:18.680-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-20T16:37:18.681-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-20T16:37:18.681-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-20T16:37:18.687-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-20T16:37:18.976-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-20T16:37:18.979-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-20T16:37:18.980-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-20T16:37:18.980-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-20T16:37:18.980-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-20T16:37:19.007-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-20T16:37:25.598-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:57905 #1 (1 connection now open)
+2020-06-20T16:37:25.607-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:57905 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T16:37:25.607-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-20T16:37:25.653-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:57905
+2020-06-20T16:39:43.219-0400 I  NETWORK  [conn1] end connection 10.222.1.60:57905 (0 connections now open)
+2020-06-20T16:39:47.312-0400 I  CONTROL  [thread2] Ctrl-C signal
+2020-06-20T16:39:47.312-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-20T16:39:47.314-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-20T16:39:47.315-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-20T16:39:47.316-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-20T16:39:47.317-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-20T16:39:47.348-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-20T16:39:47.349-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-20T16:39:47.349-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-20T16:39:47.350-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-20T16:39:47.350-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-20T16:39:47.351-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-20T16:39:47.389-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-20T16:39:47.389-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-20T16:39:47.390-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-20T16:39:47.662-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-20T16:39:47.663-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-20T16:39:47.663-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-20T16:49:28.120-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T16:49:28.123-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T16:49:29.042-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T16:49:29.046-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=11616 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T16:49:29.046-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T16:49:29.046-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T16:49:29.046-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T16:49:29.046-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T16:49:29.047-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T16:49:29.052-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T16:49:29.052-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T16:49:29.155-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:154575][11616:140718413405776], txn-recover: Recovering log 56 through 57
+2020-06-20T16:49:29.288-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:288173][11616:140718413405776], txn-recover: Recovering log 57 through 57
+2020-06-20T16:49:29.419-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:418895][11616:140718413405776], txn-recover: Main recovery loop: starting at 56/6528 to 57/256
+2020-06-20T16:49:29.646-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:646002][11616:140718413405776], txn-recover: Recovering log 56 through 57
+2020-06-20T16:49:29.786-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:786333][11616:140718413405776], txn-recover: Recovering log 57 through 57
+2020-06-20T16:49:29.891-0400 I  STORAGE  [initandlisten] WiredTiger message [1592686169:890683][11616:140718413405776], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-20T16:49:29.936-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-20T16:49:29.946-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-20T16:49:29.958-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-20T16:49:29.962-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-20T16:49:29.963-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-20T16:49:29.963-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-20T16:49:29.967-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-20T16:49:30.359-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-20T16:49:30.362-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-20T16:49:30.362-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-20T16:49:30.363-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-20T16:49:30.363-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-20T16:49:31.015-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-20T16:49:35.428-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:58275 #1 (1 connection now open)
+2020-06-20T16:49:35.437-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:58275 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T16:49:35.437-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-20T16:49:35.473-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:58275
+2020-06-20T16:51:45.256-0400 I  NETWORK  [conn1] end connection 10.222.1.60:58275 (0 connections now open)
+2020-06-20T16:52:23.360-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:58383 #2 (1 connection now open)
+2020-06-20T16:52:23.369-0400 I  NETWORK  [conn2] received client metadata from 10.222.1.60:58383 conn2: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T16:52:23.408-0400 I  ACCESS   [conn2] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:58383
+2020-06-20T16:57:53.275-0400 I  NETWORK  [conn2] end connection 10.222.1.60:58383 (0 connections now open)
+2020-06-20T16:57:57.656-0400 I  CONTROL  [thread3] Ctrl-C signal
+2020-06-20T16:57:57.657-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-20T16:57:57.659-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-20T16:57:57.660-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-20T16:57:57.661-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-20T16:57:57.662-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-20T16:57:57.694-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-20T16:57:57.695-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-20T16:57:57.695-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-20T16:57:57.696-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-20T16:57:57.696-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-20T16:57:57.696-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-20T16:57:57.728-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-20T16:57:57.729-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-20T16:57:57.729-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-20T16:57:58.001-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-20T16:57:58.002-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-20T16:57:58.002-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-20T16:58:05.992-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T16:58:05.994-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T16:58:06.404-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=13980 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T16:58:06.405-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T16:58:06.408-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T16:58:06.408-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T16:58:06.426-0400 E  STORAGE  [initandlisten] WiredTiger error (16) [1592686686:425782][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000001: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device Raw: [1592686686:425782][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000001: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device
+2020-06-20T16:58:06.456-0400 E  STORAGE  [initandlisten] WiredTiger error (16) [1592686686:455925][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device Raw: [1592686686:455925][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device
+2020-06-20T16:58:06.482-0400 E  STORAGE  [initandlisten] WiredTiger error (16) [1592686686:481849][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device Raw: [1592686686:481849][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device
+2020-06-20T16:58:06.505-0400 E  STORAGE  [initandlisten] WiredTiger error (16) [1592686686:504901][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device Raw: [1592686686:504901][13980:140718413405776], connection: __win_fs_remove, 81: db\journal\WiredTigerPreplog.0000000002: file-remove: DeleteFileW: The process cannot access the file because it is being used by another process.
+: Resource device
+2020-06-20T16:58:06.519-0400 W  STORAGE  [initandlisten] Failed to start up WiredTiger under any compatibility version.
+2020-06-20T16:58:06.519-0400 F  STORAGE  [initandlisten] Reason: 16: Resource device
+2020-06-20T16:58:06.519-0400 F  -        [initandlisten] Fatal Assertion 28595 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 915
+2020-06-20T16:58:06.519-0400 F  -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2020-06-20T17:03:46.280-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-20T17:03:46.282-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-20T17:03:46.624-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=10672 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-20T17:03:46.625-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-20T17:03:46.627-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-20T17:03:46.628-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-20T17:03:46.673-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687026:673716][10672:140718413405776], txn-recover: Recovering log 57 through 58
+2020-06-20T17:03:46.752-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687026:751509][10672:140718413405776], txn-recover: Recovering log 58 through 58
+2020-06-20T17:03:46.836-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687026:835342][10672:140718413405776], txn-recover: Main recovery loop: starting at 57/6656 to 58/256
+2020-06-20T17:03:46.931-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687026:931041][10672:140718413405776], txn-recover: Recovering log 57 through 58
+2020-06-20T17:03:47.005-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687027:4455][10672:140718413405776], txn-recover: Recovering log 58 through 58
+2020-06-20T17:03:47.056-0400 I  STORAGE  [initandlisten] WiredTiger message [1592687027:56354][10672:140718413405776], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-20T17:03:47.089-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-20T17:03:47.096-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-20T17:03:47.106-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-20T17:03:47.111-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-20T17:03:47.111-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-20T17:03:47.112-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-20T17:03:47.117-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-20T17:03:47.308-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-20T17:03:47.310-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-20T17:03:47.310-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-20T17:03:47.310-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-20T17:03:47.310-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-20T17:03:48.015-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-20T17:03:54.352-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:58754 #1 (1 connection now open)
+2020-06-20T17:03:54.360-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:58754 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-20T17:03:54.360-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-20T17:03:54.399-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:58754
+2020-06-20T17:04:04.639-0400 I  SHARDING [conn1] Marking collection ChatRoom.users as collection version: <unsharded>
+2020-06-20T17:04:21.394-0400 I  NETWORK  [conn1] end connection 10.222.1.60:58754 (0 connections now open)
+2020-06-20T17:04:34.980-0400 I  CONTROL  [thread2] Ctrl-C signal
+2020-06-20T17:04:34.980-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-20T17:04:34.982-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-20T17:04:34.982-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-20T17:04:34.983-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-20T17:04:34.984-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-20T17:04:35.012-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-20T17:04:35.013-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-20T17:04:35.013-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-20T17:04:35.023-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-20T17:04:35.024-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-20T17:04:35.024-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-20T17:04:35.098-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-20T17:04:35.099-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-20T17:04:35.099-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-20T17:04:35.400-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-20T17:04:35.400-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-20T17:04:35.400-0400 I  CONTROL  [consoleTerminate] shutting down with code:12

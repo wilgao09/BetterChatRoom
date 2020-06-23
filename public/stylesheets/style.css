@@ -1,10 +1,13 @@
 body {
   padding: 50px;
-  font: 14px "Consolas", Helvetica, Arial, sans-serif;
+  font: 16px "Consolas", Helvetica, Arial, sans-serif;
   background-color: black;
   color: white; }
 
 a {
   color: #00B7FF; }
+
+.topText {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

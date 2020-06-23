@@ -14,13 +14,14 @@ var database = require("../conf/database.js");
 const Users = database.collectionList.user_logins;
 
 router.use(function(req, res, next){
-    console.log("entering with ");
-    console.log(req.query);
-    console.log(req.body);
+
     if (req.body == {} && req.query != {}) {
         req.body = req.query;
 
     }
+    console.log("entering with ");
+    console.log(req.query);
+    console.log(req.body);
     next();
 })
 
