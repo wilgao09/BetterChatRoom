@@ -13,7 +13,7 @@ var fs = require('fs');
 var sass = require('node-sass');
 var ncp = require('ncp').ncp;
 
-var fileName = "index";
+var fileName = "room";
 
 var compiledPugFunc = pug.compileFile("views/"+fileName + ".pug");
 

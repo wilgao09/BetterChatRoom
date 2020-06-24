@@ -10,4 +10,15 @@ a {
 .topText {
   text-align: center; }
 
+#chatroom-cont{
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#log {
+  border: 2px solid white;
+  overflow: scroll;
+}
+
 /*# sourceMappingURL=style.css.map */
+

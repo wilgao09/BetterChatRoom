@@ -5,6 +5,7 @@
 
 function login() {
     submitForm("login", "/checkUser/login", function() {
+        console.log("RESPONSE");
         console.log(this);
         var res = JSON.parse(this.responseText);
         switch (res.valid) {
@@ -18,7 +19,10 @@ function login() {
                 alert("VALID!");
                 toDashboard();
                 break;
+            
         }
+        console.log("here is res");
+        console.log(res);
     });
 }
 
@@ -34,11 +38,13 @@ function register() {
 }
 
 function toDashboard() {
-    var url = "http://" + window.location.hostname +  ":6689/dashboard";
-    var nReq = new XMLHttpRequest();
-    nReq.open("GET",url,true);
-    nReq.onload = function() {
-        console.log(this.response);
-    }
-    nReq.send();
+    window.location = "http://" + window.location.hostname + ":6689/dashboard"
+    // var url = "http://" + window.location.hostname +  ":6689/dashboard";
+    // var nReq = new XMLHttpRequest();
+    // nReq.open("GET",url,true);
+    // nReq.onload = function() {
+    //     console.log(this.response);
+    //     document = this.response;
+    // }
+    // nReq.send();
 }
