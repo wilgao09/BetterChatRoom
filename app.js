@@ -30,7 +30,18 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+//i dont know if this is the right place
+// app.use(function(req, res, next) {
+//   res.setHeader('Cache-Control', 'private');
+
+// } )vb 
+
 app.use(JWTmid);
+// app.use(function(req,res,next){
+//   console.log("request looks like");
+//   console.log(req);
+//   next();
+// })
 app.use('/', indexRouter);
 app.use('/checkUser', checkUserRouter);
 app.use('/dashboard',dashboardRouter);

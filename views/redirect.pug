@@ -1,0 +1,7 @@
+
+extends layout
+
+block content
+    h1(class="super-big") #{errCode}
+    h3(class="subtext") #{subtext}
+    button(onclick=" window.location = 'http:// + `${window.location.hostname}` + :6689/'") Go to index

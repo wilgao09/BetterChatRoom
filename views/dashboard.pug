@@ -3,3 +3,9 @@ extends layout
 
 block content
     p WELCOME #{usrn}
+    div
+        p JOIN ROOM
+        input(type="text" id="nRoom")
+        button(onclick = "goToRoom(document.getElementById('nRoom').value)") Go TO Room
+    div RECENT ROOMS
+        // do skomething
