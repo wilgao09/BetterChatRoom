@@ -4,10 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
+var bodyparser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var checkUserRouter = require('./routes/checkUser');
 var dashboardRouter = require('./routes/dashboard');
+var roomRouter = require('./routes/rooms');
 
 var JWTmid = require('./middleware/JWTAuth');
 // var usersRouter = require('./routes/users');
@@ -30,6 +32,7 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyparser.json());
 //i dont know if this is the right place
 // app.use(function(req, res, next) {
 //   res.setHeader('Cache-Control', 'private');
@@ -45,6 +48,7 @@ app.use(JWTmid);
 app.use('/', indexRouter);
 app.use('/checkUser', checkUserRouter);
 app.use('/dashboard',dashboardRouter);
+app.use('/rooms', roomRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

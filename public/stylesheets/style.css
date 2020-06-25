@@ -10,15 +10,47 @@ a {
 .topText {
   text-align: center; }
 
-#chatroom-cont{
+#chatroom-cont {
   width: 80vw;
+  height: 80vh;
   margin: 0 auto;
-}
+  display: flex;
+  flex-direction: column; }
+
+#welcome {
+  flex-basis: auto; }
 
 #log {
   border: 2px solid white;
-  overflow: scroll;
-}
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 0 2vh 0;
+  padding: 0 2vh;
+  height: 100%; }
+
+#message-bar {
+  flex-basis: auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch; }
+
+#message-bar input {
+  font: inherit;
+  background-color: black;
+  color: white;
+  padding: 1vh;
+  width: 100%;
+  border: solid 2px white; }
+
+#message-bar button {
+  flex-basis: auto;
+  padding: 0 2vh;
+  background-color: white;
+  border: solid 2px white;
+  font: inherit; }
+
+#message-bar button:hover {
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
-

@@ -34,6 +34,7 @@ var server = http.createServer(app);
 
 //create io server (???) not actually sure what it is; eventlistener maybe???
 var io = sock(server);
+require('../sockets/rooms').setServer(io);
 
 /**
  * Listen on provided port, on all network interfaces.
