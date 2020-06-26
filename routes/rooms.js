@@ -27,19 +27,25 @@ router.get("/:room/:chunk", function(req,res,next){
 
 
 router.post("/:room/nMsg", function(req,res,next) {
+    // console.log(req.body);
+    // console.log("BODY ^ ^^ ^ ");
+    console.log("INCOMING MESSAGE");
     console.log(req.body);
-    console.log("BODY ^ ^^ ^ ");
     if (req.auth.usrn == undefined || req.auth.usrn == "NO-ID") {
         res.send({valid:"NO-ID"});
     } else {
         //check if valid format
         var bod = req.body;
-        if (bod.usrn == undefined || bod.contents == undefined || bod.contents.typ != ("file" || "text") || bod.data == undefined) {
+        bod.usrn = req.auth.usrn;
+        console.log(bod);
+        if (bod.contents == undefined || (bod.contents.typ != "text" && bod.contents.typ != "file") || bod.contents.data == undefined) {
+            console.log("INVALID FORM");
             res.send({valid:"INVALID FORM"});
         } else {
+            console.log(req.params);
             msgs.addMsg(bod, req.params.room, function(msg) {
                 res.send({valid:"VALID"});
-                socket.sendMsg(msg);
+                socket.sendMsg(msgs.HTMLfromMsg(msg));
             })
         }
     }

@@ -54,7 +54,10 @@ module.exports.HTMLfromMsg = (msg) => {
     }
 }
 
-module.exports.addMsg = async (msgJSON, room, cb) => {
+module.exports.addMsg = (msgJSON, room, cb) => {
+    console.log("ADDMSG PARAMS");
+    console.log(msgJSON);
+    console.log(room);
     //there is a predefiend format or these
     // {
     //     usrn:<someusername>,
@@ -73,6 +76,8 @@ module.exports.addMsg = async (msgJSON, room, cb) => {
         }
         var maxChunk = -1; //this should never be the case because the first chunk is c0
         var ind = -1;
+        console.log("found chunks");
+        console.log(res);
         for (var n = 0 ;n < res.length; n++) {
             if (res[n].chunk > maxChunk) {
                 maxChunk = res[n].chunk;
@@ -84,17 +89,17 @@ module.exports.addMsg = async (msgJSON, room, cb) => {
             "usrn": msgJSON.usrn,
             "contents": msgJSON.contents
         };
-        if (ind == -1 || res[ind].msg.length >= 16) {
+        if (ind == -1 || res[ind].msgs.length >= 16) {
             var nChunk = new roomModel({
                 "room":room,
                 "chunk":ind+1,
-                "msg":[nMsgObj]
+                "msgs":[nMsgObj]
             })
             await nChunk.save()
             cb(nMsgObj);
 
         } else {
-            res[ind].msg.push(nMsgObj);
+            res[ind].msgs.push(nMsgObj);
             await res[ind].save();
             cb(nMsgObj);
         }
