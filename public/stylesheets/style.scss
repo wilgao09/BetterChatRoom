@@ -9,6 +9,10 @@ a {
   color: #00B7FF;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .topText {
   text-align: center;
 }
@@ -59,6 +63,42 @@ a {
   font: inherit;
 }
 
-#message-bar button:hover{
-  cursor: pointer;
+
+//DASHBOARD
+#dashboard-cont{
+  margin: 0 auto;
+  width: min-content;
+  text-align: center;
 }
+
+#dashboard-cont > *{
+  width: max-content;
+}
+
+#dashboard-cont > div{
+  margin: 4vh auto;
+}
+
+#room-input{
+  display: flex;
+  flex-direction: row;
+}
+
+#room-input > *{
+  width: max-content;
+  font: inherit;
+}
+
+#room-input input{
+  background-color: black;
+  color: white;
+  border: solid 2px white;
+  padding: 1vh;
+}
+
+#room-input button{
+  background-color: white;
+  border: solid 2px white;
+  color: black;
+}
+

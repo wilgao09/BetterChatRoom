@@ -2,11 +2,13 @@
 extends layout
 
 block content
-    p WELCOME #{usrn}
-    div
-        p JOIN ROOM
-        input(type="text" id="nRoom")
-        button(onclick = "goToRoom(document.getElementById('nRoom').value)") Go TO Room
-    div RECENT ROOMS
-        // do skomething
+    div(id="dashboard-cont")
+        h1 WELCOME #{usrn}
+        div(id="join-room")
+            p JOIN ROOM
+            div(id="room-input")
+                input(type="text" id="nRoom" placeholder="Enter room number")
+                button(onclick = "goToRoom(document.getElementById('nRoom').value)") Go To Room
+        div(id="recent-rooms") RECENT ROOMS
+            // do skomething
     script(src="javascript/dashboard.js")
