@@ -2595,3 +2595,108 @@
 2020-06-26T12:09:25.244-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
 2020-06-26T12:09:25.245-0400 I  CONTROL  [consoleTerminate] now exiting
 2020-06-26T12:09:25.245-0400 I  CONTROL  [consoleTerminate] shutting down with code:12
+2020-06-28T10:51:42.228-0400 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-06-28T10:51:42.861-0400 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-06-28T10:51:42.887-0400 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-06-28T10:51:42.892-0400 I  CONTROL  [initandlisten] MongoDB starting : pid=16044 port=8741 dbpath=db 64-bit host=DESKTOP-FGVO4E4
+2020-06-28T10:51:42.892-0400 I  CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] db version v4.2.8
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] git version: 43d25964249164d76d5e04dd6cf38f6111e21f5f
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] modules: none
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] build environment:
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten]     distmod: 2012plus
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-06-28T10:51:42.893-0400 I  CONTROL  [initandlisten] options: { config: "conf/mongod.conf", net: { bindIp: "10.222.1.60", port: 8741 }, security: { authorization: "enabled" }, storage: { dbPath: "db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "logs/mongod.log" } }
+2020-06-28T10:51:42.906-0400 I  STORAGE  [initandlisten] Detected data files in db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-06-28T10:51:42.907-0400 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3490M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-06-28T10:51:42.971-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355902:971519][16044:140703564258896], txn-recover: Recovering log 69 through 70
+2020-06-28T10:51:43.047-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355903:47318][16044:140703564258896], txn-recover: Recovering log 70 through 70
+2020-06-28T10:51:43.129-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355903:129096][16044:140703564258896], txn-recover: Main recovery loop: starting at 69/29824 to 70/256
+2020-06-28T10:51:43.291-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355903:290664][16044:140703564258896], txn-recover: Recovering log 69 through 70
+2020-06-28T10:51:43.369-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355903:369455][16044:140703564258896], txn-recover: Recovering log 70 through 70
+2020-06-28T10:51:43.438-0400 I  STORAGE  [initandlisten] WiredTiger message [1593355903:438271][16044:140703564258896], txn-recover: Set global recovery timestamp: (0, 0)
+2020-06-28T10:51:43.475-0400 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-06-28T10:51:43.497-0400 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-06-28T10:51:43.516-0400 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-06-28T10:51:43.535-0400 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-06-28T10:51:43.536-0400 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-06-28T10:51:43.538-0400 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-06-28T10:51:43.554-0400 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-06-28T10:51:43.732-0400 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2020-06-28T10:51:43.735-0400 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-06-28T10:51:43.736-0400 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-06-28T10:51:43.736-0400 I  NETWORK  [listener] Listening on 10.222.1.60
+2020-06-28T10:51:43.736-0400 I  NETWORK  [listener] waiting for connections on port 8741
+2020-06-28T10:51:44.012-0400 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-06-28T10:51:49.446-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:64328 #1 (1 connection now open)
+2020-06-28T10:51:49.452-0400 I  NETWORK  [conn1] received client metadata from 10.222.1.60:64328 conn1: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-28T10:51:49.452-0400 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-06-28T10:51:49.529-0400 I  ACCESS   [conn1] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:64328
+2020-06-28T10:52:41.802-0400 I  SHARDING [conn1] Marking collection ChatRoom.users as collection version: <unsharded>
+2020-06-28T10:58:17.538-0400 I  SHARDING [conn1] Marking collection ChatRoom.rooms as collection version: <unsharded>
+2020-06-28T10:58:17.886-0400 I  COMMAND  [conn1] command ChatRoom.rooms command: find { find: "rooms", filter: { room: ""0"" }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("adc8e9c0-508b-418f-9d4c-75809d054f16") }, $db: "ChatRoom" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 cursorExhausted:1 numYields:1 nreturned:0 queryHash:C01885E7 planCacheKey:C01885E7 reslen:103 locks:{ ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } }, Mutex: { acquireCount: { r: 1 } } } storage:{ data: { bytesRead: 429 } } protocol:op_msg 338ms
+2020-06-28T10:58:18.137-0400 I  NETWORK  [conn1] end connection 10.222.1.60:64328 (0 connections now open)
+2020-06-28T10:59:31.327-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:64442 #2 (1 connection now open)
+2020-06-28T10:59:31.332-0400 I  NETWORK  [conn2] received client metadata from 10.222.1.60:64442 conn2: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-28T10:59:31.350-0400 I  ACCESS   [conn2] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:64442
+2020-06-28T11:02:41.118-0400 I  NETWORK  [conn2] end connection 10.222.1.60:64442 (0 connections now open)
+2020-06-28T11:02:45.337-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:64488 #3 (1 connection now open)
+2020-06-28T11:02:45.342-0400 I  NETWORK  [conn3] received client metadata from 10.222.1.60:64488 conn3: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-28T11:02:45.355-0400 I  ACCESS   [conn3] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:64488
+2020-06-28T11:05:23.673-0400 I  NETWORK  [conn3] end connection 10.222.1.60:64488 (0 connections now open)
+2020-06-28T11:12:49.797-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:64925 #4 (1 connection now open)
+2020-06-28T11:12:49.803-0400 I  NETWORK  [conn4] received client metadata from 10.222.1.60:64925 conn4: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-28T11:12:49.841-0400 I  ACCESS   [conn4] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:64925
+2020-06-28T11:19:52.710-0400 I  NETWORK  [conn4] end connection 10.222.1.60:64925 (0 connections now open)
+2020-06-28T11:22:07.116-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65268 #5 (1 connection now open)
+2020-06-28T11:22:07.138-0400 I  NETWORK  [conn5] received client metadata from 10.222.1.60:65268 conn5: { driver: { name: "nodejs", version: "3.5.7" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.13.1, LE (legacy)" }
+2020-06-28T11:22:07.170-0400 I  ACCESS   [conn5] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65268
+2020-06-28T11:24:37.834-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65359 #6 (2 connections now open)
+2020-06-28T11:24:37.839-0400 I  NETWORK  [conn6] received client metadata from 10.222.1.60:65359 conn6: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.858-0400 I  ACCESS   [conn6] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65359
+2020-06-28T11:24:37.920-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65360 #7 (3 connections now open)
+2020-06-28T11:24:37.920-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65361 #8 (4 connections now open)
+2020-06-28T11:24:37.921-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65362 #9 (5 connections now open)
+2020-06-28T11:24:37.921-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65363 #10 (6 connections now open)
+2020-06-28T11:24:37.929-0400 I  NETWORK  [conn7] received client metadata from 10.222.1.60:65360 conn7: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.929-0400 I  NETWORK  [conn8] received client metadata from 10.222.1.60:65361 conn8: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.929-0400 I  NETWORK  [conn9] received client metadata from 10.222.1.60:65362 conn9: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.930-0400 I  NETWORK  [conn10] received client metadata from 10.222.1.60:65363 conn10: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.953-0400 I  ACCESS   [conn7] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65360
+2020-06-28T11:24:37.953-0400 I  ACCESS   [conn8] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65361
+2020-06-28T11:24:37.953-0400 I  ACCESS   [conn9] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65362
+2020-06-28T11:24:37.953-0400 I  ACCESS   [conn10] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65363
+2020-06-28T11:24:37.958-0400 I  NETWORK  [listener] connection accepted from 10.222.1.60:65364 #11 (7 connections now open)
+2020-06-28T11:24:37.958-0400 I  ACCESS   [conn8] Unauthorized: not authorized on admin to execute command { hostInfo: 1, lsid: { id: UUID("81e0b374-2c56-4422-be63-4dd722f70401") }, $db: "admin" }
+2020-06-28T11:24:37.958-0400 I  ACCESS   [conn10] Unauthorized: not authorized on admin to execute command { getCmdLineOpts: 1, lsid: { id: UUID("6c0ea3f6-1865-4579-a9a1-2693bf686d58") }, $db: "admin" }
+2020-06-28T11:24:37.959-0400 I  NETWORK  [conn11] received client metadata from 10.222.1.60:65364 conn11: { driver: { name: "nodejs", version: "3.5.6" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.18362" }, platform: "'Node.js v12.4.0, LE (unified)", application: { name: "MongoDB Compass Community" } }
+2020-06-28T11:24:37.974-0400 I  ACCESS   [conn11] Successfully authenticated as principal chadmin on ChatRoom from client 10.222.1.60:65364
+2020-06-28T11:24:48.209-0400 I  ACCESS   [conn8] Unauthorized: not authorized on ChatRoom to execute command { aggregate: "rooms", pipeline: [ { $indexStats: {} }, { $project: { name: 1, usageHost: "$host", usageCount: "$accesses.ops", usageSince: "$accesses.since" } } ], cursor: {}, lsid: { id: UUID("7c5aa44e-1934-43c2-880b-5192c3343fe1") }, $db: "ChatRoom" }
+2020-06-28T11:24:48.633-0400 I  ACCESS   [conn8] Unauthorized: not authorized on ChatRoom to execute command { aggregate: "rooms", pipeline: [ { $indexStats: {} }, { $project: { name: 1, usageHost: "$host", usageCount: "$accesses.ops", usageSince: "$accesses.since" } } ], cursor: {}, lsid: { id: UUID("61a71570-15db-4ac1-a343-a463ee1e4a42") }, $db: "ChatRoom" }
+2020-06-28T11:26:16.805-0400 I  NETWORK  [conn11] end connection 10.222.1.60:65364 (6 connections now open)
+2020-06-28T11:26:16.805-0400 I  NETWORK  [conn6] end connection 10.222.1.60:65359 (5 connections now open)
+2020-06-28T11:26:16.806-0400 I  NETWORK  [conn7] end connection 10.222.1.60:65360 (4 connections now open)
+2020-06-28T11:26:16.806-0400 I  NETWORK  [conn8] end connection 10.222.1.60:65361 (3 connections now open)
+2020-06-28T11:26:16.806-0400 I  NETWORK  [conn9] end connection 10.222.1.60:65362 (2 connections now open)
+2020-06-28T11:26:16.807-0400 I  NETWORK  [conn10] end connection 10.222.1.60:65363 (1 connection now open)
+2020-06-28T11:26:26.834-0400 I  NETWORK  [conn5] end connection 10.222.1.60:65268 (0 connections now open)
+2020-06-28T11:27:23.912-0400 I  CONTROL  [thread12] Ctrl-C signal
+2020-06-28T11:27:23.912-0400 I  CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends
+2020-06-28T11:27:23.927-0400 I  NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2020-06-28T11:27:23.928-0400 I  -        [consoleTerminate] Stopping further Flow Control ticket acquisitions.
+2020-06-28T11:27:23.932-0400 I  CONTROL  [consoleTerminate] Shutting down free monitoring
+2020-06-28T11:27:23.933-0400 I  FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2020-06-28T11:27:23.972-0400 I  STORAGE  [consoleTerminate] Deregistering all the collections
+2020-06-28T11:27:23.973-0400 I  STORAGE  [consoleTerminate] Timestamp monitor shutting down
+2020-06-28T11:27:23.974-0400 I  STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2020-06-28T11:27:23.975-0400 I  STORAGE  [consoleTerminate] Shutting down session sweeper thread
+2020-06-28T11:27:23.975-0400 I  STORAGE  [consoleTerminate] Finished shutting down session sweeper thread
+2020-06-28T11:27:23.976-0400 I  STORAGE  [consoleTerminate] Shutting down journal flusher thread
+2020-06-28T11:27:23.993-0400 I  STORAGE  [consoleTerminate] Finished shutting down journal flusher thread
+2020-06-28T11:27:23.993-0400 I  STORAGE  [consoleTerminate] Shutting down checkpoint thread
+2020-06-28T11:27:23.993-0400 I  STORAGE  [consoleTerminate] Finished shutting down checkpoint thread
+2020-06-28T11:27:24.283-0400 I  STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2020-06-28T11:27:24.284-0400 I  CONTROL  [consoleTerminate] now exiting
+2020-06-28T11:27:24.285-0400 I  CONTROL  [consoleTerminate] shutting down with code:12

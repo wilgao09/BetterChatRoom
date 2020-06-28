@@ -40,6 +40,8 @@ var messageFunction = pug.compileFile("views/message.pug");
  * Accepts either an array of JSON msg or a single JSON message
  */
 module.exports.HTMLfromMsg = (msg) => {
+    console.log("generating HTML from MSG");
+    console.log(msg);
     if (Array.isArray(msg)) {
         var toR = "";
         for (var n = 0 ;n != msg.length; n++) {

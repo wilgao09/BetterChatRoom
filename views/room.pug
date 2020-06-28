@@ -9,15 +9,15 @@ block content
             h1 Welcome to Room No. 1
         div(id="log")
             //messages go here
-            p shit"
-            a(href="#") thing
+            //- p shit"
+            //- a(href="#") thing
         div(id="message-bar")
-            input(type="text" class="bar-comp" name="message" placeholder="Type Message Here...")
-            button(class="bar-comp") SEND
+            input(type="text" class="bar-comp" name="message" placeholder="Type Message Here..." id ="inputBar")
+            button(class="bar-comp" onclick="sendTxt(document.getElementById('inputBar').value)") SEND
 
 
     //just tesdting a thing
-    button(onclick="sendTxt('THIS IS A TEST MESAGE')") send test msg
+    //- button(onclick="sendTxt('THIS IS A TEST MESAGE')") send test msg
 
     //link(href="stylesheets/style.css" rel="stylesheet")
     script(src="javascript/socket.io-client/dist/socket.io.js")
