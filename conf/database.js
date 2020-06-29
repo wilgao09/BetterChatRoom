@@ -13,7 +13,7 @@ function init() {
     //     return;
     // }
     // console.log(`mongodb://${dbip}:8741/ChatRoom`);
-    mongoose.connect(process.env.MONGODB_URI, {
+    mongoose.connect("mongodb+srv://cluster0-hwwk7.mongodb.net/ChatRoom", {
         useNewUrlParser:true,
         user:"Chadmin",
         pass:"taurus222"
