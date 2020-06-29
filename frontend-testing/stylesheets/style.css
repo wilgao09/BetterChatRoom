@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 30px 50px;
   font: 16px "Consolas", Helvetica, Arial, sans-serif;
   background-color: black;
   color: white; }
@@ -62,7 +62,7 @@ button:hover {
   width: max-content; }
 
 #dashboard-cont > div {
-  margin: 3vh auto; }
+  margin: 4vh auto; }
 
 #room-input {
   display: flex;

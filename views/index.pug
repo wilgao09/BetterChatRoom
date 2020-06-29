@@ -3,7 +3,7 @@ extends layout
 block content
     h1= title
     h2(class="topText") Welcome to BETTERCHATROOM
-    div(class= "col")
+    div(class="form-cont")
         div(class="form" id="login")
             p(class="subhead") LOGIN
             input(type="text" name="usrn" placeholder="Username")
@@ -11,7 +11,7 @@ block content
             label(for="submit")
                 button(onclick="login()") Submit
 
-    div(class= "col")
+
         div(class="form" id="register")
             p(class="subhead") REGISTER 
             input(type="text" name="fName" placeholder="First Name")
