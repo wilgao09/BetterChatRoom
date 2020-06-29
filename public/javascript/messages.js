@@ -35,7 +35,7 @@ function goToRoom(name) {
     name = JSON.stringify(name);
     localStorage.setItem("currRoom",name);
     var xhr = new XMLHttpRequest();
-    var url = "http://" + window.location.hostname + ":6689/rooms/" + name;
+    var url = `https://chatroom8982.herokuapp.com/rooms/` + name;
     xhr.open("GET",url,true);
     //this assumes that youre in the main rooms.pug place
     xhr.onload = function() {
