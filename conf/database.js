@@ -13,25 +13,25 @@ function init() {
     //     return;
     // }
     // console.log(`mongodb://${dbip}:8741/ChatRoom`);
-    mongoose.connect('mongodb+srv://cluster0-hwwk7.mongodb.net/ChatRoom', {
+    mongoose.connect(process.env.MONGODB_URI, {
         useNewUrlParser:true,
         user:"Chadmin",
         pass:"taurus222"
-    }); //???
+    }).then(() => {console.log("CONNECTED")}).catch(()=>{console.log("FAILED")});
 
     db = mongoose.connection;
 
-    db.on("error", () => {
-        console.log("falC");
-        debug("Failed to connect to database server");
+    // db.on("error", () => {
+    //     console.log("falC");
+    //     debug("Failed to connect to database server");
 
-    });
+    // });
 
-    db.once("open", () => {
-        console.log("connecL");
-        debug("Successfully connected");
-        initialized = true;
-    });
+    // db.once("open", () => {
+    //     console.log("connecL");
+    //     debug("Successfully connected");
+    //     initialized = true;
+    // });
 
 }
 
