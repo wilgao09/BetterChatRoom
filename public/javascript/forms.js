@@ -7,7 +7,8 @@
   * @param {*} strId the id for the form (or the element containing the labels)
   */
 function submitForm(strId, action, callback, method="POST") {
-    var url = "http://" + window.location.hostname + ":6689" + action;
+    //var url = "http://" + window.location.hostname + ":6689" + action;
+    var url = "https://chatroom8982.herokuapp.com" + action;
     var form = document.getElementById(strId);
     var inputs = form.getElementsByTagName("input");
     console.log(form);

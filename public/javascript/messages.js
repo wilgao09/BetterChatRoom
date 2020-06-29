@@ -14,7 +14,8 @@ function sendTxt(text) {
     console.log("SENDING NEXT MSG :: " + text);
     var room = localStorage.getItem("currRoom");
     var xhr = new XMLHttpRequest();
-    var url = "http://" + window.location.hostname + `:6689/rooms/${room}/nMsg`;
+    // var url = "http://" + window.location.hostname + `:6689/rooms/${room}/nMsg`;
+    var url = `https://chatroom8982.herokuapp.com/rooms/${room}/nMsg`;
     xhr.open("POST",url,true);
 
     xhr.onload  = function(){console.log("done")};

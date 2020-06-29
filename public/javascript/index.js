@@ -38,7 +38,8 @@ function register() {
 }
 
 function toDashboard() {
-    window.location = "http://" + window.location.hostname + ":6689/dashboard"
+    // window.location = "http://" + window.location.hostname + ":6689/dashboard"
+    window.location = "https://chatroom8982.herokuapp.com/dashboard"
     // var url = "http://" + window.location.hostname +  ":6689/dashboard";
     // var nReq = new XMLHttpRequest();
     // nReq.open("GET",url,true);
