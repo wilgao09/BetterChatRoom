@@ -14,8 +14,8 @@ var sock = require('socket.io');
 /**
  * Database initialization
  */
-var database = require('../conf/database');
-database.setIp(process.argv[2]);
+//var database = require('../conf/database');
+//database.setIp(process.argv[2]);
 
 
 /**

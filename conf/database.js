@@ -6,16 +6,17 @@ var dbip = "";
 var db;
 var initialized = false;
 
+
 function init() {
-    if (dbip == "") {
-        debug("No ip set; Aborting");
-        return;
-    }
-    console.log(`mongodb://${dbip}:8741/ChatRoom`);
-    mongoose.connect(`mongodb://${dbip}:8741/ChatRoom`, {
+    // if (dbip == "") {
+    //     debug("No ip set; Aborting");
+    //     return;
+    // }
+    // console.log(`mongodb://${dbip}:8741/ChatRoom`);
+    mongoose.connect('mongodb+srv://cluster0-hwwk7.mongodb.net/ChatRoom', {
         useNewUrlParser:true,
-        user:"chadmin",
-        pass:"toor"
+        user:"Chadmin",
+        pass:"taurus222"
     }); //???
 
     db = mongoose.connection;
@@ -33,10 +34,12 @@ function init() {
 }
 
 
-module.exports.setIp = (nIp) => {
-    dbip = nIp;
-    init();
-}
+// module.exports.setIp = (nIp) => {
+//     dbip = nIp;
+//     init();
+// }
+
+init(); 
 
 module.exports.db = () => {
     if (!initialized) {
