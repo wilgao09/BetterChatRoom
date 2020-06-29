@@ -15,8 +15,8 @@ function init() {
     // console.log(`mongodb://${dbip}:8741/ChatRoom`);
     mongoose.connect("mongodb+srv://cluster0-hwwk7.mongodb.net/ChatRoom", {
         useNewUrlParser:true,
-        user:"Chadmin",
-        pass:"taurus222"
+        user:"chadmin",
+        pass:process.env.MONGOP
     }).then(() => {console.log("CONNECTED")}).catch((err)=>{console.log("FAILED"); console.log(err)});
 
     db = mongoose.connection;
