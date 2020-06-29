@@ -42,11 +42,11 @@ function init() {
 init(); 
 
 module.exports.db = () => {
-    if (!initialized) {
-        debug("Database not initialized!!");
-    } else {
+    // if (!initialized) {
+    //     debug("Database not initialized!!");
+    // } else {
         return db;
-    }
+    // }
     return null;
 };
 
