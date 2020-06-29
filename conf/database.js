@@ -22,11 +22,13 @@ function init() {
     db = mongoose.connection;
 
     db.on("error", () => {
+        console.log("falC");
         debug("Failed to connect to database server");
 
     });
 
     db.once("open", () => {
+        console.log("connecL");
         debug("Successfully connected");
         initialized = true;
     });
