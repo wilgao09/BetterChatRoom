@@ -17,7 +17,7 @@ function init() {
         useNewUrlParser:true,
         user:"Chadmin",
         pass:"taurus222"
-    }).then(() => {console.log("CONNECTED")}).catch(()=>{console.log("FAILED")});
+    }).then(() => {console.log("CONNECTED")}).catch((err)=>{console.log("FAILED"); console.log(err)});
 
     db = mongoose.connection;
 
