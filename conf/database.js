@@ -16,7 +16,7 @@ function init() {
     mongoose.connect("mongodb+srv://cluster0-hwwk7.mongodb.net/ChatRoom", {
         useNewUrlParser:true,
         user:"chadmin",
-        pass:process.env.MONGOP
+        pass:"" + process.env.MONGOP
     }).then(() => {console.log("CONNECTED")}).catch((err)=>{console.log("FAILED"); console.log(err)});
 
     db = mongoose.connection;
