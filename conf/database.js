@@ -17,7 +17,7 @@ function init() {
         useNewUrlParser:true,
         user:"chadmin",
         pass:"" + process.env.MONGOP
-    }).then(() => {console.log("CONNECTED")}).catch((err)=>{console.log("FAILED"); console.log(err)});
+    }).then(() => {console.log("CONNECTED")}).catch((err)=>{console.log(err); console.log("password found was " + process.env.MONGOP);});
 
     db = mongoose.connection;
 
