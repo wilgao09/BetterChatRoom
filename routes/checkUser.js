@@ -13,28 +13,16 @@ var tokens = require('../helpers/tokens');
 var database = require("../conf/database.js");
 const Users = require('../models/user');
 
-// doesnt work
-// router.use(function(req, res, next){
-
-//     if (req.body == {} && req.query != {}) {
-//         req.body = req.query;
-
-//     }
-//     console.log("entering with ");
-//     console.log(req.query);
-//     console.log(req.body);
-//     next();
-// })
 
 router.post('/login', function(req,res, next){
     // console.log("Someone tried logging in with:");
     // console.log(req.body);
-    // console.log(req.query);
+    // console.log(req.body);
     // toUse = req.body; //if using forms
     // if (toUse == {}) toUse = req.params
     Users.findOne({
-        usrn:req.query.usrn,
-        pwd:req.query.pwd
+        usrn:req.body.usrn,
+        pwd:req.body.pwd
     }, function(err,user) {
         if (err) {
             res.status(404).send({valid:"err"});
@@ -52,7 +40,7 @@ router.post('/login', function(req,res, next){
 router.post('/login', function(req,res,next) {
     //do something to take them to the next page
     var nToken = tokens.createToken({
-        usrn:req.query.usrn,
+        usrn:req.body.usrn,
         exp:Date.now()+86400000, //a day
         iss:"BetterChatroom"
     })
@@ -66,7 +54,7 @@ router.post('/login', function(req,res,next) {
 router.post('/register/:purpose', function(req, res, next) {
     //test if the username is already taken
     console.log("checking username availability");
-    Users.findOne({usrn:req.query.usrn}, function(err, user) {
+    Users.findOne({usrn:req.body.usrn}, function(err, user) {
         if (user == null) next();
         else res.send({valid:"unavailable"});
     })
@@ -77,12 +65,12 @@ router.post('/register/createUser', function(req, res, next) {
     //assume all required parts are here
     console.log("username available");
     Users.create({
-        usrn:req.query.usrn,
-        pwd:req.query.pwd,
-        fName:req.query.fName,
-        lName:req.query.lName,
+        usrn:req.body.usrn,
+        pwd:req.body.pwd,
+        fName:req.body.fName,
+        lName:req.body.lName,
         join_date:new Date(),
-        age:req.query.age,
+        age:req.body.age,
         recent:[]
     }, function(err) {
         if (err) {
