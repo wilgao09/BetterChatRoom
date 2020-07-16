@@ -17,22 +17,23 @@ function submitForm(strId, action, callback, method="POST") {
     //     var inps = labels[n].getElementsByTagName("input");
     //     if (inps.length > 0) inputs.push(inps[0]);
     // }
-    if (inputs.length > 0) url += "?";
-    console.log(inputs);
-    for (var ind = 0; ind != inputs.length; ind++) {
-        if (ind != 0) url += "&";
-        url += inputs[ind].name + "=" + inputs[ind].value.trim(); 
+//     if (inputs.length > 0) url += "?";
+//     console.log(inputs);
+//     for (var ind = 0; ind != inputs.length; ind++) {
+//         if (ind != 0) url += "&";
+//         url += inputs[ind].name + "=" + inputs[ind].value.trim(); 
+//     }
+//     console.log(url);
+    var nBody = {}
+    for (var n = 0 ;n != inputs.length; n++) {
+        nBody[inputs[n].name] = inputs[n].value;
     }
-    console.log(url);
-    // nBody = {}
-    // for (var n = 0 ;n != inputs.length; n++) {
-    //     nBody[inputs[n].name] = inputs[n].value;
-    // }
-    // console.log(nBody);
+    console.log(nBody);
     var req = new XMLHttpRequest();
     req.open(method,url,true);
     req.onload = callback;
+    req.setRequestHeader("Content-type","application/json");
     // console.log(JSON.stringify(req));
-    req.send();
+    req.send(JSON.stringify(nBody));
 }
 
