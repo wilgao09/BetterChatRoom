@@ -15,7 +15,7 @@ router.get('/', function(req,res,next) {
 
 router.get("/:room", function(req,res,next){
     msgs.getNthChunk(function(msg) {
-        msg = msg.msgs;
+        
         if (msg == undefined || msg == null) {
             msg = {
                 usrn: "Nicholas Cage softly whispers into your ear",
@@ -24,6 +24,8 @@ router.get("/:room", function(req,res,next){
                     data:"There seems to be nothing here, start talking!"
                 }
             }
+        } else {
+            msg = msg.msgs;
         }
         res.send(msgs.HTMLfromMsg(msg))
     }, req.params.room);
