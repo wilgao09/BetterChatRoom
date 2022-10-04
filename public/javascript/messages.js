@@ -11,6 +11,7 @@ if (localStorage.getItem("currRoom") == null) {
 }
 
 function sendTxt(text) {
+    if (text == "") return;
     console.log("SENDING NEXT MSG :: " + text);
     var room = localStorage.getItem("currRoom");
     var xhr = new XMLHttpRequest();
@@ -24,8 +25,40 @@ function sendTxt(text) {
             typ:"text",
             data: text
         }
-    }))
+    }));
+}
 
+function sendFile(HTMLEl) {
+    if (HTMLEl.files.length > 0) {
+        console.log("sending file?!?");
+        var room = localStorage.getItem("currRoom");
+        var xhr = new XMLHttpRequest();
+        var url = "http://" + window.location.hostname + `:6689/rooms/${room}/nMsg`;
+        xhr.open("POST",url,true);
+
+        //NEED TO WRITE ONLOAD
+        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+        var fr = new FileReader();
+        fr.onload = function(file) {
+            xhr.send(JSON.stringify({
+                contents: {
+                    typ:"file",
+                    data:JSON.stringify({
+                        name:HTMLEl.value,
+                        bin: fr.result
+                    })
+                }
+            }))
+        };
+
+        fr.readAsBinaryString(HTMLEl.files[0]);
+    }
+
+}
+
+function sendMsg() {
+    sendTxt(document.getElementById('inputBar').value);
+    sendFile(document.getElementById('fileInput'));
 }
 
 

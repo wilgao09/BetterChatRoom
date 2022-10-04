@@ -35,6 +35,7 @@ module.exports.getNthChunk = (cb, room, chunk) => { //the room number, the chunk
 }
 
 var messageFunction = pug.compileFile("views/message.pug");
+var fileFunction = pug.compileFile("views/file.pug");
 
 /**
  * Accepts either an array of JSON msg or a single JSON message
@@ -47,12 +48,21 @@ module.exports.HTMLfromMsg = (msg) => {
         for (var n = 0 ;n != msg.length; n++) {
             if (msg[n].contents.typ == "text")
                 toR += messageFunction({"usrn":msg[n].usrn, "msg":msg[n].contents.data})
-            else   
-                toR += "theres a file or unrecognized type ehre";
+            if (msg[n].contents.typ == "file") {
+                var moreDat = JSON.parse(msg[n].contents.data);
+                toR += fileFunction({"usrn":msg[n].usrn, "filename":moreDat.name, "rci":msg[n].rci});
+            }
+                
+               
         }
         return toR;
     } else {
-        return messageFunction({usrn:msg.usrn, "msg":msg.contents.data});
+        if (msg.contents.typ == "file") {
+            var moreDat = JSON.parse(msg.contents.data);
+            return fileFunction({"usrn":msg.usrn, "filename":moreDat.name, "rci":msg.rci})
+        } else {
+            return messageFunction({"usrn":msg.usrn, "msg":msg.contents.data})
+        }
     }
 }
 
@@ -92,6 +102,7 @@ module.exports.addMsg = (msgJSON, room, cb) => {
             "contents": msgJSON.contents
         };
         if (ind == -1 || res[ind].msgs.length >= 16) {
+            nMsgObj.rci = "" + room + "." + (ind+1) + "." + 0;
             var nChunk = new roomModel({
                 "room":room,
                 "chunk":ind+1,
@@ -101,6 +112,7 @@ module.exports.addMsg = (msgJSON, room, cb) => {
             cb(nMsgObj);
 
         } else {
+            nMsgObj.rci = "" + room + "." + (ind) + "." + res[ind].msgs.length;
             res[ind].msgs.push(nMsgObj);
             await res[ind].save();
             cb(nMsgObj);

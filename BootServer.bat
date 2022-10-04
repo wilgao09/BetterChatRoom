@@ -1,6 +1,6 @@
 @ECHO OFF
 
-set dbip=10.222.1.60
+set dbip=172.24.194.223
 
 REM step one: start the mongo server
 

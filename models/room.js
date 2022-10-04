@@ -11,6 +11,7 @@ var contentSchema = new mongoose.Schema({
 var msgSchema = new mongoose.Schema({
     time:Number,
     usrn:String,
+    rci:String,
     contents: contentSchema
 })
 
