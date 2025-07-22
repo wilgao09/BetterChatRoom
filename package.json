@@ -16,7 +16,7 @@
     "mongoose": "^5.9.14",
     "morgan": "~1.9.1",
     "ncp": "^2.0.0",
-    "node-sass-middleware": "0.11.0",
+    "node-sass-middleware": "1.1.0",
     "pug": "^2.0.4",
     "socket.io": "^2.3.0",
     "utf-8-validate": "^5.0.2"
